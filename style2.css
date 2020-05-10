@@ -1,0 +1,45 @@
+#body{
+    background-color: #EEE;
+    font-family: sans-serif
+}
+#container{
+    background-color: white;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header{
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+#content{
+    padding: 10px;
+}
+#photo{
+    text-align: center;
+    width: 320px;
+    float: left;
+}
+#main{
+    width: 460px;
+    float: right;
+}
+#footer{
+    clear:both;
+    text-align: right;
+    background-color: #999;
+    color: white;
+}
+#navbar{
+    color: #05DFFF;
+    background-color: #C3C3C3;
+    word-spacing: 50px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+#text{
+    width:780px;
+}
