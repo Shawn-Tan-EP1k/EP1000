@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DFAB</title>
+        <link rel="stylesheet" type="text/css" href="style2.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>My Website</h1>
+            </div>
+            <div id="content">
+                <div id="navbar">
+                    <a class="selected" href="index.html">Home</a>
+                    <a href="about2.html">About</a>
+                    <a href="doc.html">Documentation</a>
+                </div>
+                <div id="text">
+                    <h1>Modelling 3D Objects</h1><hr>
+                    <h3>Laser Cut Cube</h3>
+                    <p>In this lesson we tried making a laser cut cube. This cube is made out of 6 laser cut panels that can interlock with each other.</p>
+                    <img src="Vimage/lcb1.PNG" width="720px"><br>
+                    <p>The first thing we did was to set up some parameters. This will help further down the line when we need to modify a dimension(e.g length), we do need to go to each individual dimension to retype it. All we need to do is to go to the parameters page and change the langth parameters. All dimensions assosiated with the length parameters will change because of it.</p>
+                    <img src="Vimage/lcb2.PNG" width="720px"><br>
+                    <p>In this next image I created a sketch of a centre point rectangle. I dimensioned it using the parameters length and width</p>
+                    <img src="Vimage/lcb3.PNG" width="720px"><br>
+                    <p>The next thing I did was to extrude it. Again I used the parameters to help me (thickness was used this time).</p>
+                    <img src="Vimage/lcb4.PNG" width="720px"><br>
+                    <p>I then created a sketch of a 2 point rectangle on the front surface, anchoring it at the bottom left corner. I used the parameters width and height here. To create the interlocking fingers, I used the parameters thickness and fw.</p>
+                    <img src="Vimage/lcb5.PNG" width="720px"><br>
+                    <p>After that, I extruded the selected profile. However instead of just joining or cutting like we usually do, we used a function called "New Body".</p>
+                    <img src="Vimage/lcb6.PNG" width="720px"><br>
+                    <p>Next, I clicked on the newly created body and used a new function "combine". I used a tool within it to cut any parts that intersect with it. However this fuction allows you to select multiple bodies as cutting tools but only 1 target, thus to cut multiple targets, this process must be repeated</p>
+                    <img src="Vimage/lcb7.PNG" width="720px"><br>
+                    <p>In this next image, I mirrored the new body, which I shall now call front to reduce confusion, across the XZ plane to create another new body, called back.</p>
+                    <img src="Vimage/lcb8.PNG" width="720px"><br>
+                    <p>I repeated the combine process to remove the intersecting portions.</p>
+                    <img src="Vimage/lcb9.PNG" width="720px"><br>
+                    <p>I created a new sketch on the right side. I started by creating a 2 point rectangle, achoring it to the bottom left corner. I dimensioned it with parameters length and height. I then made a project geometry of the inside of the cube to allow me to easily connect the 2 point rectangles for the fingers to it.</p>
+                    <img src="Vimage/lcb10.PNG" width="720px"><br>
+                    <p>I then extruded the sketch to create a new body.</p>
+                    <img src="Vimage/lcb13.PNG" width="720px"><br>
+                    <p>I used the combine cut process in each of the three faces.</p>
+                    <img src="Vimage/lcb14.PNG" width="720px"><br>
+                    <p>I then mirrored The right body across the YZ plane...</p>
+                    <img src="Vimage/lcb15.PNG" width="720px"><br>
+                    <p>...and repeated the combine cut process.</p>
+                    <img src="Vimage/lcb16.PNG" width="720px"><br>
+                    <p>I then created a midplane between the bottom and top faces...</p>
+                    <img src="Vimage/lcb17.PNG" width="720px"><br>
+                    <p>...and mirrored my bottom body, which was my first body, across it.</p>
+                    <img src="Vimage/lcb18.PNG" width="720px"><br>
+                    <p>I then used the combine cut function to remove the intersections from the front, left, back, and right face.</p>
+                    <img src="Vimage/lcb19.PNG" width="720px"><br>
+                    <p>In this image above, sorry for the poor quality btw, I created new sketches for the front, left and bottom faces. In sketch mode I selected the entire profile and finished sketch. For all 3 sketches I saved it as DXF file format.</p>
+                    <img src="Vimage/lcb20.PNG" width="720px"><br>
+                    <p>I then imported the 3 DXF files into a new Fusion 360 file. I repeated this a second time so that I will end up with 2 of each piece. I then extruded them by 3mm, which is the thickness from the parameters in the other file.</p>
+                </div>
+            </div>
+            <div id="footer">
+                Copyright &copy; 2020 Stan
+            </div>
+        </div>
+        
+    </body>
+</html>
