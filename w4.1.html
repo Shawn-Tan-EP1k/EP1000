@@ -18,6 +18,86 @@
                 <div id="text">
                     <h1>Introduction to Fusion 360</h1><hr>
                     <h3>Basics of Fusion 360</h3>
+                    <p>Fusion 360 is a Computer Aided Design Software, similar to Autodesk Inventor, that uses a set of digital tools to craft objects. CAD is often used to design prototypes and concepts that are difficult to visualise on paper. I will be sharing some basic tools and functions of Fusion 360 but will continue to the explain others in the future.</p>
+                    <h5>Getting Around Fusion 360</h5>
+                    <p>Legend</p>
+                    <ul>
+                        <li>Left Mouse Button(LMB)</li>
+                        <li>Middle Mouse Button(MMB)</li>
+                        <li>Right Mouse Button(RMB)</li>
+                    </ul>
+                    <ul>
+                        <li>To <b>move</b> the camera around, hold down MMB and move your mouse.</li>
+                        <li>To <b>rotate</b> the camera, hold down MMB + shift key and move your mouse.</li>
+                        <li>To <b>get an option wheel and drop down box</b>, press RMB.</li>
+                    </ul>
+                    <p>For most cases, I recommend using the navigation box located on the top right corner to get necessary views.</p>
+                    <h3>The Grid</h3>
+                    <img src="Vimage/FB2.png" width="720px"><br>
+                    <p>The X-axis is red, Y-axis is Green, Z-axis is Blue. Thus the plane between the red and green is the XY plane, the plane between the green and blue is the YZ plane, the plane between the blue and red is the XZ plane. Right click on any plane and click create sketch.</p>
+                    <h3>The Toolbar</h3>
+                    <img src="Vimage/FB3.png" width="720px"><br>
+                    <p>Under the create section in sketch is where you can get most of your basic shapes. Line, rectangles and circles are shapes commonly used in most of our projects. Other than shapes, patterns are also used to replicate profiles (such as intricate sketches etc.). Project Geometry can be really useful when most of your profiles are based of a certain body or profile. What it does is that it highlights the body/profile to allow you to snap to it when in sketch mode. Dimensions is also useful for altering the size of the line/shape/object after creating it.</p>
+                    <img src="Vimage/FB4.png" width="720px"><br>
+                    <p>Under the modify section in sketch is where you can get tools to create more intricate features. Sometimes create shapes do not provide everything or would be too inefficient. That is what the modify section aims to help with. To make a rounded corner, we can use 2 lines and a circle and it will still be alright but a more efficient way is to fillet the corner where two lines meet by using the <b>fillet</b> tool and selecting both lines. <b>Trim</b> is also a useful tool to remove any unnecessery shapes or sections of shapes that might hinder further operations or just to make it more neat. <b>Offset</b> is another useful tool to know about. It comes in handy when you need to replicate a profile but scaling it up or down to make it bigger or smaller.</p>
+                    <img src="Vimage/FB5.png" width="720px"><br>
+                    <p>Under the constraints section in sketch is where you can get most of your constraining tools. Constraints are needed to ensure that for sketch can exist logically. By placing down constraints, you can lock certain lines in a place you want it to, which is important especially when modifying dimensions. If your sketch is not fully constrained then you can't move on to making it into a 3D solid. Some shapes already come with pre-existing contraints, e.g a rectangle has all opposing/alternate lines at a parallel constraint.</p>
+                    <img src="Vimage/FB7.png" width="720px"><br>
+                    <p>Under the create section in solids is where you can get most of your 3D tools. A few common tools are extrude, revolve, and loft, which I will explain in greater detail later on. Other useful functions are the pattern tool, which can replicate bodies/profiles in a pattern, and the mirror tool, which can help mirror bodies/profiles across a plane.</p>
+                    <img src="Vimage/FB8.png" width="720px"><br>
+                    <p>Under the construct section in solids is where you can get different kinds of workplanes. Creating workplanes are important when reference points are needed, such as mirroring across it, or just to create a body that extrudes into a different direction than the norm etc.. At this stage we mainly use offset planes but if some designs call for it, planes that faces a different direction than the origin planes might be added.</p>
+                    <h3>Extrude</h3>
+                    <img src="Vimage/FB9.png" width="720px"><br>
+                    <p>Extrusion is a commonly used tool to make solid objects, so it important to understand as much as we can about this tool. First of all under start, we have 3 options, Profile plane, Offset plane, and From object.</p>
+                    <ul>
+                        <li><b>Profile plane</b>: This is the more commonly selected option. It is used to extrude from the already selected plane.</li>
+                        <li><b>Offset plane</b>: Instead of creating a offset workplane and extruding from there, you can just use the offset plane function to achieve the same thing in less steps.</li>
+                        <li><b>From object</b>: This is used when we want to extrude a certain profile but from another face. This is used when we need similar bodies on multiple faces.</li>
+                    </ul>
+                    <p>The next thing is direction of extrusion. Under direction we find One side, Two sides, and symmetric.</p>
+                    <ul>
+                        <li><b>One Side</b>: The more commonly selected option, this allows you to extrude the profile in a single direction.</li>
+                        <li><b>Two sides</b>: This allows you to extrude a sketch assymetrically in both directions. This means that you can extrude in two opposing directions at different lengths</li>
+                        <li><b>Symmetric</b>: This allows you to extrude a sketch symetrically in both directions. This means that you can extrude in two opposing directions but at the same lengths</li>
+                    </ul>
+                    <p>The next thing is extent of extrusion. Under extent we find Distance, To objects, and All.</p>
+                    <ul>
+                        <li><b>Distance</b>: The more commonly selected option, this allows you to extrude the profile to a certain length (a minus can be added to reverse the direction).</li>
+                        <li><b>To objects</b>: This allows you to extrude a sketch to another body or face. This is usually used to cut a cetain part of the object but not all the way.</li>
+                        <li><b>Symmetric</b>: This allows you to extrude a sketch to an infinite distance. Almost always used in cutting operations to cut a profile through the entire profile.</li>
+                    </ul>
+                    <p>The last thing is operation where we can find Join, Cut, Intersect, New bodies, and New components.</p>
+                    <ul>
+                        <li><b>Join</b>: This function allows you to extrude an object that is connected to the object or plane you extruded from</li>
+                        <li><b>Cut</b>: This function is to remove or cut out sections of a solid with the selected profile.</li>
+                        <li><b>Intersect</b>: This function will allow you to keep any solid that intersects with the extruded profile, removing the rest in the process.</li>
+                        <li><b>New bodies</b>: This creates a new body with its own set of properties</li>
+                        <li><b>New components</b>: This a new component, similar to creating a new body but it also has its own origin plane and motion relation with the main body. Components are however not covered extensively in these lessons</li>
+                    </ul>
+                    <h3>Shell</h3>
+                    <img src="Vimage/FB11.png" width="720px"><br>
+                    <p>Shelling is the process of hollowing out a solid. By shelling a body, you will make the inside of the body completely hollow. By shelling a face, you will open up the face and make the body hollow as seen in the image above.</p>
+                    <h3>Revolve</h3>
+                    <img src="Vimage/FB12.png" width="720px"><br>
+                    <p>Revolve is another commonly used tool. I will breakdown how to use the revolve tool. Firstly, you can select the profile you want to revolve and which axis you want to revolve around. The next thing is the how you want to revolve to profile. Under Type, you can select Angle, To, and Full.</p>
+                    <ul>
+                        <li><b>Angle</b>: This allow you to revolve the profile up to a certain angle.</li>
+                        <li><b>To</b>: This command is used to revolve to a face or to an object</li>
+                        <li><b>Full</b>: This gives you a complete revolution.</li>
+                    </ul>
+                    <p>The last thing is operation, where we can find Join, Cut, Intersect, New bodies, and New components.</p>
+                    <ul>
+                        <li><b>Join</b>: This function allows you to revolve an object that is connected to the object or plane you are revolving from</li>
+                        <li><b>Cut</b>: This function is to remove or cut out sections of a solid with the selected profile.</li>
+                        <li><b>Intersect</b>: This function will allow you to keep any solid that intersects with the revolved profile, removing the rest in the process.</li>
+                        <li><b>New bodies</b>: This creates a new body with its own set of properties</li>
+                        <li><b>New components</b>: This a new component, similar to creating a new body but it also has its own origin plane and motion relation with the main body. Components are however not covered extensively in these lessons</li>
+                    </ul>
+                    <h3>Loft</h3>
+                    <img src="Vimage/FB13.png" width="720px"><br>
+                    <p>Lofting allows you to quite smoothly and organically connect profiles from multiple workplanes. As you can see in the image above, I lofted together a square, a circle, and a hexagon.</p>
+                    <hr>
+                    <h3>Nametag</h3>
                     <p>In this lesson we learnt the basics on using Fusion 360. We started by making a nametag.</p>
                     <img src="Vimage/F360-1.PNG" width="720px"><br>
                     <p>In the image above, I created a sketch using a set of guidelines found on blackboard. I first went to origin, right clicked on the xy plane and clicked create sketch. I made a 2 point rectangle starting from the origin point and adjusted the dimentions to 50mm by 15mm. I proceeded to fillet all corners by 4mm radius. The next thing I did was to create to keyhole loop. I made a 8mm diametre and a 4mm diametre at the midpoint of the left side of the keychain.</p>
