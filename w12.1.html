@@ -16,8 +16,35 @@
                     <a href="doc.html">Documentation</a>
                 </div>
                 <div id="text">
-                    <h1>Introduction to Arduino</h1><hr>
-                    <h3>What is Arduino?</h3>
+                    <h1>Analog I/O</h1><hr>
+                    <h3>Debounce</h3>
+                     <img src="Vimage/button_bounce.jpeg" width="360px">
+                    <p>When a button is pressed to switch the state of the circuit, the mechanical button will tend to not switch perfectly, some times bouncing between both contact points and causing what we see in the above state diagram. There are 3 solutions to deal with this.</p>
+                    <ol>
+                        <li>Reading the state without debouncing countermeasures</li>
+                        <li>Debounce using delay() function</li>
+                        <li>Debounce using millis() function</li>
+                    </ol>
+                    <a href="https://www.brainy-bits.com/arduino-switch-debounce/">Website to find out more on debounce</a>
+                    <h3>Analog Signals</h3>
+                    <ul>
+                        <li>Digital signals</li>
+                        <ul>
+                            <li>Can be processed quickly</li>
+                            <li>transition between states not smooth like analog</li>
+                        </ul>
+                        <li>Analog signals</li>
+                        <ul>
+                            <li>Naturally occuring</li>
+                            <li>Do not have discrete voltage, transitions smoothly</li>
+                            <li>Hard to process</li>
+                        </ul>
+                        <li>Conversions</li>
+                        <ul>
+                            <li>Analog Digital Conversion(ADC)</li>
+                            <li>Digital to analog</li>
+                        </ul>
+                    </ul>
                 </div>
             </div>
             <div id="footer">

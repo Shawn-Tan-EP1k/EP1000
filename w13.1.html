@@ -16,13 +16,45 @@
                     <a href="doc.html">Documentation</a>
                 </div>
                 <div id="text">
-                    <h1>Sensors</h1><hr>
+                    <h1>Input Devices(Sensors)</h1><hr>
+                    <h3>What are sensors</h3>
+                    <p>A sensor is a device used to sense changes in the environment. They could be in the form of manual input like a switch or automatic input like a LDR for light.</p>
+                    <h3>Methods of reading sensors</h3>
+                    <p>There are 3 methods of reading/obtaining information from a sensor.</p>
+                    <ul>
+                        <li>Always available</li>
+                        <ul>
+                            <li>Data is always available</li>
+                            <li>Changes occur very slowly(e.g. temperature)</li>
+                        </ul>
+                        <li>Polling</li>
+                        <ul>
+                            <li>Constantly checking sensor for input</li>
+                            <li>Sensor will indicate to processor that there is new reading available once new information is gathered.</li>
+                            <li>Data is read when processor notices the changes</li>
+                            <li>e.g.Switch,IR sensor </li>
+                        </ul>
+                        <li>Triggering</li>
+                        <ul>
+                            <li>A trigger signal initiates the reading</li>
+                            <li>Processor sends a signal to the sensor, asking it to gathers data</li>
+                            <li>When information is gathered, it is sent back to the processor</li>
+                            <li>E.g. Ultrasonic sensor</li>
+                        </ul>
+                    </ul>
+                    <h3>Libraries</h3>
+                    <p>Some sensors and actuators(e.g. servo motor) requires a dedicated library for certain functions. Some libraries can be found in the arduino compiler app but others need to be installed. To do so, go to Sketch > Include Library > Manage Library >(search for need library in the search bar). Alternatively, we can do a quick google seach for the library and install the .zip file through Sketch > Include Library > Add .Zip Library. Restart Arduino and check if the library has been installed correctly.</p>
                     <h3>Type of sensors available</h3>
                     <ul>
-                        <li>Switch</li>
-                        <li>LDR</li>
-                        <li>Distance</li>
-                        <li>Temp sensor</li>
+                        <li><b>Switch:</b> An electrical component that can open or close a circuit. It can provide a digital signal of either LOW or HIGH. It comes in 4 forms and there are multiple variants of each.<br> <img src="Vimage/ALLTHROWS.jpg" width="360px"></li>
+                        <ol>
+                            <li> Single Pole Single Throw (SPST): This is a simple on/off switch which encompasses some push button switches, slide switchs and toggle switches. Examples below are the Toggle and push button switches respectively.<br><img src="Vimage/SPSTToggle.jpg" width="180px"> <img src="Vimage/SPSTPush.jpg" width="180px"></li>
+                            <li> Single Pole Double Throw (SPDT): This is a more common switch which allows for the diversion of current. You would usually have power connected to the middle and the switch allows you to divert current to either Normally Opened(NO) or Normally Closed(NC). Examples are most slide and toggle switches as shown below respectively.<br><img src="Vimage/SPDTSlide.jpg" width="180px"> <img src="Vimage/SPDTToggle.jpg" width="180px"></li>
+                            <li>Double Pole Single Throw (DPST) and Double Pole Double Throw (DPDT) are very rarely used in mini circuit project and thus will not cover in depth how it works but below are examples of DPST and DPDT respectively.<br><img src="Vimage/DPST.jpg" width="180px"> <img src="Vimage/DPDT.jpg" width="180px"></li>
+                        </ol>
+                        <li>LDR: The light dependent resistor is a variable resistor that varies its ohmage based on light intensity. The brighter it is, the lower its resistance</li>
+                        <li>Distance: There are 2 types of distance sensors, IR and Ultrasonic. IR Obstacle Avoidance Sensor will remains at a fixed state until an object is at a certain distance to it(adjusted with the variable resistor attached to it). Once detected, the state changes and remain at its new state until the object is out of the distance. It has a range of 2cm to 40cm.<br>Ultrasonic Sensor HC-SR04 has a range between 2cm to 4m, and uses ultrasound to detect distance before returning a pulse proportional to the distance measureed(similar to how a submarines sonar works). It has and accuracy of 3mm and measures at an angle of 15 degrees.</li>
+                        <li>Temp sensor: The DHT-11 measures and records the the temperature and humidity of its environment. The DHT-11 has 4 pins. The first pin goes to VCC power source. The second pin goes to Data in the arduino. The third pin is not used while the forth pin goes to ground.</li>
                     </ul>
                 </div>
             </div>
